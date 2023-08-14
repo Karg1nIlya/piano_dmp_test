@@ -4,10 +4,11 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: ['@babel/polyfill', './src/index.ts'],
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
+    clean: true,
   },
   devServer: {
     static: {
@@ -17,13 +18,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(ts|js)x?$/,
         exclude: /(node_modules)/,
         loader: "babel-loader",
         options: {
           presets: [
             "@babel/preset-env",
             ["@babel/preset-react", { runtime: "automatic" }],
+            "@babel/preset-typescript",
           ],
           cacheDirectory: true,
           cacheCompression: false,
@@ -41,7 +43,7 @@ module.exports = {
     }),
   ],
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".jsx", '.tsx', '.ts'],
   },
   optimization: {
     minimizer: [

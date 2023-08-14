@@ -1,0 +1,7 @@
+.board-list {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 80px;
+}

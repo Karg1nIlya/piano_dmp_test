@@ -1,0 +1,44 @@
+.board {
+    background-color: rgb(16,18,4);
+    padding: 20px;
+    width: 400px;
+    border-radius: 20px;
+    color: rgb(180, 192, 206);
+    margin-right: 20px;
+    min-height: 140px;
+}
+
+.board__header {
+    padding: 10px;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.board__loading {
+    font-size: 18px;
+}
+
+.board__tasks-empty {
+    font-size: 18px;
+}
+
+.board__items {
+    text-align: center;
+}
+
+.board-item {
+    list-style: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: rgb(34, 39, 43);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.board-item:last-child {
+    margin-bottom: 0; 
+}
